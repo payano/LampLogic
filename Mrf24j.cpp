@@ -14,7 +14,7 @@ Mrf24j::Mrf24j() {
 	// TODO Auto-generated constructor stub
 
 }
-Mrf24j::Mrf24j(std::shared_ptr<Message> incoming, std::shared_ptr<Message> outgoing):
+Mrf24j::Mrf24j(std::shared_ptr<Message<int>> incoming, std::shared_ptr<Message<int>> outgoing):
 		mIncoming(incoming),
 		mOutgoing(outgoing){
 

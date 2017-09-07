@@ -14,7 +14,7 @@ Led::Led() {
 	// TODO Auto-generated constructor stub
 
 }
-Led::Led(std::shared_ptr<Message> incoming, std::shared_ptr<Message> outgoing):
+Led::Led(std::shared_ptr<Message<int>> incoming, std::shared_ptr<Message<int>> outgoing):
 	mIncoming(incoming),
 	mOutgoing(outgoing){
 }
@@ -31,6 +31,7 @@ void Led::start(){
 		std::this_thread::sleep_for(std::chrono::milliseconds(100));
 	}
 }
+
 void Led::stop(){
 
 }

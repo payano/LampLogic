@@ -14,8 +14,8 @@
 #include "Message.h"
 #include <string>
 #include <memory>
-std::shared_ptr<Message> message1 = std::make_shared<Message>();
-std::shared_ptr<Message> message2 = std::make_shared<Message>();
+std::shared_ptr<Message<int>> message1 = std::make_shared<Message<int>>();
+std::shared_ptr<Message<int>> message2 = std::make_shared<Message<int>>();
 
 void mrf24jThread(){
 	Mrf24j mrf24j(message1, message2);

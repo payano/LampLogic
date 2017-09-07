@@ -14,11 +14,11 @@
 
 class Mrf24j: public IThread {
 private:
-	std::shared_ptr<Message> mIncoming;
-	std::shared_ptr<Message> mOutgoing;
+	std::shared_ptr<Message<int>> mIncoming;
+	std::shared_ptr<Message<int>> mOutgoing;
 public:
 	Mrf24j();
-	Mrf24j(std::shared_ptr<Message> incoming, std::shared_ptr<Message> outgoing);
+	Mrf24j(std::shared_ptr<Message<int>> incoming, std::shared_ptr<Message<int>> outgoing);
 	virtual ~Mrf24j();
 
 	virtual void start();
