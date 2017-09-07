@@ -6,16 +6,26 @@
  */
 
 #include "Main.h"
-
+#include "Mrf24j.h"
+#include "Led.h"
+#include "Button.h"
 #include <iostream>       // std::cout
 #include <thread>         // std::thread
-
+#include "Message.h"
+#include <string>
+#include <memory>
+std::shared_ptr<Message> message1 = std::make_shared<Message>();
+std::shared_ptr<Message> message2 = std::make_shared<Message>();
 
 void mrf24jThread(){
-	std::cout << __FUNCTION__ << std::endl;
+	Mrf24j mrf24j(message1, message2);
+	mrf24j.start();
+
 }
 void ledThread(){
-	std::cout << __FUNCTION__ << std::endl;
+	Led led(message2, message1);
+	led.start();
+
 }
 void buttonThread(){
 	std::cout << __FUNCTION__ << std::endl;
