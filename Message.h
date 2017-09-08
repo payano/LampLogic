@@ -8,12 +8,10 @@
 #ifndef MESSAGE_H_
 #define MESSAGE_H_
 #include <list>
-#include <string>
 #include <mutex>
 #include "Message.h"
-#include <iostream>
-constexpr int maxMessageLength = 100;
 
+constexpr int maxMessageLength = 100;
 
 template <class T>
 class Message {
@@ -35,7 +33,6 @@ public:
 template <class T>
 void Message<T>::putMessage(T message){
 	if(mMessage.size() >= maxMessageLength){
-		std::cout << "1hBm" << std::endl;
 		throw std::invalid_argument("Can not add to list, the list is full.");
 	}
 	mLock.lock();
@@ -46,7 +43,6 @@ void Message<T>::putMessage(T message){
 template <class T>
 T Message<T>::getMessage(){
 	if(mMessage.size() == 0){
-		std::cout << "2hAm" << std::endl;
 		throw std::invalid_argument("Can not withdraw from list, the list is empty.");
 	}
 	mLock.lock();
