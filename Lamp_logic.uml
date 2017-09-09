@@ -59,7 +59,32 @@
       </ownedParameter>
     </ownedOperation>
   </packagedElement>
-  <packagedElement xmi:type="uml:Class" xmi:id="_fEbO4JVaEeeu94-V4U94fg" name="Mrf24j"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_fEbO4JVaEeeu94-V4U94fg" name="Mrf24j">
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_WferIJWCEeek3eoZtS6BkA" name="Mrf24j"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_Z9_ZYJWCEeek3eoZtS6BkA" name="~Mrf24j"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_aIIM0JWCEeek3eoZtS6BkA" name="reset"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_aJwkgJWCEeek3eoZtS6BkA" name="init"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_aQHrMJWCEeek3eoZtS6BkA" name="get_pan"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_aTXzgJWCEeek3eoZtS6BkA" name="set_pan"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_aW8r8JWCEeek3eoZtS6BkA" name="address16_write"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_aaST0JWCEeek3eoZtS6BkA" name="address16_read"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_adxssJWCEeek3eoZtS6BkA" name="set_interrupts"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_ahMNEJWCEeek3eoZtS6BkA" name="set_promiscuous"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_akxskJWCEeek3eoZtS6BkA" name="set_channel"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_ap3A4JWCEeek3eoZtS6BkA" name="rx_enable"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_atMowJWCEeek3eoZtS6BkA" name="rx_disable"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_awks4JWCEeek3eoZtS6BkA" name="rx_flush"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_a0FT4JWCEeek3eoZtS6BkA" name="rx_info"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_a3a7wJWCEeek3eoZtS6BkA" name="tx_info"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_a6qdAJWCEeek3eoZtS6BkA" name="get_rxbuf"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_a-InwJWCEeek3eoZtS6BkA" name="rx_datalength"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_bB3RMJWCEeek3eoZtS6BkA" name="set_ignoreBytes"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_bFOHMJWCEeek3eoZtS6BkA" name="set_bufferPHY"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_bI3REJWCEeek3eoZtS6BkA" name="get_bufferPHY"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_bKmWcJWCEeek3eoZtS6BkA" name="set_palna"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_bN5iEJWCEeek3eoZtS6BkA" name="send16"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_bRg2wJWCEeek3eoZtS6BkA" name="interrupt_handler"/>
+  </packagedElement>
   <packagedElement xmi:type="uml:Class" xmi:id="_h1K4MJVaEeeu94-V4U94fg" name="IHAL" isAbstract="true"/>
   <packagedElement xmi:type="uml:Class" xmi:id="_thJ-MJVaEeeu94-V4U94fg" name="HALSpi"/>
   <packagedElement xmi:type="uml:Class" xmi:id="_40rg4JVaEeeu94-V4U94fg" name="HALButton"/>
