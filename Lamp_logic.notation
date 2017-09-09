@@ -341,6 +341,26 @@
       <layoutConstraint xmi:type="notation:Bounds" xmi:id="_h1MtZ5VaEeeu94-V4U94fg"/>
     </children>
     <children xmi:type="notation:BasicCompartment" xmi:id="_h1MtaJVaEeeu94-V4U94fg" type="Class_OperationCompartment">
+      <children xmi:type="notation:Shape" xmi:id="_h1U3IJWEEeek3eoZtS6BkA" type="Operation_ClassOperationLabel">
+        <element xmi:type="uml:Operation" href="Lamp_logic.uml#_h05ZUJWEEeek3eoZtS6BkA"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_h1U3IZWEEeek3eoZtS6BkA"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_mrAMoJWEEeek3eoZtS6BkA" type="Operation_ClassOperationLabel">
+        <element xmi:type="uml:Operation" href="Lamp_logic.uml#_mqTCAJWEEeek3eoZtS6BkA"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_mrAMoZWEEeek3eoZtS6BkA"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_pBdGoJWEEeek3eoZtS6BkA" type="Operation_ClassOperationLabel">
+        <element xmi:type="uml:Operation" href="Lamp_logic.uml#_pA9XYJWEEeek3eoZtS6BkA"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_pBdGoZWEEeek3eoZtS6BkA"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_qDGw4JWEEeek3eoZtS6BkA" type="Operation_ClassOperationLabel">
+        <element xmi:type="uml:Operation" href="Lamp_logic.uml#_qCpd4JWEEeek3eoZtS6BkA"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_qDGw4ZWEEeek3eoZtS6BkA"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_qqruQJWEEeek3eoZtS6BkA" type="Operation_ClassOperationLabel">
+        <element xmi:type="uml:Operation" href="Lamp_logic.uml#_qqSFoJWEEeek3eoZtS6BkA"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_qqsVUJWEEeek3eoZtS6BkA"/>
+      </children>
       <styles xmi:type="notation:TitleStyle" xmi:id="_h1MtaZVaEeeu94-V4U94fg"/>
       <styles xmi:type="notation:SortingStyle" xmi:id="_h1MtapVaEeeu94-V4U94fg"/>
       <styles xmi:type="notation:FilteringStyle" xmi:id="_h1Mta5VaEeeu94-V4U94fg"/>
