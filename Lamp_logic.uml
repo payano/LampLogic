@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_fw-TMJVXEeeu94-V4U94fg" name="Lamp_logic" visibility="public">
+  <packagedElement xmi:type="uml:Class" xmi:id="_hRj8MJVXEeeu94-V4U94fg" name="IThread" isAbstract="true">
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_lqpxcJVZEeeu94-V4U94fg" name="start" isAbstract="true"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_oTzacJVYEeeu94-V4U94fg" name="stop" isAbstract="true"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_qpm0MJVYEeeu94-V4U94fg" name="isRunning" isAbstract="true"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_CYlK8JVZEeeu94-V4U94fg" name="Mrf24j">
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_Oku-wJVZEeeu94-V4U94fg" name="start"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_Pfc6kJVZEeeu94-V4U94fg" name="stop"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_PlZKgJVZEeeu94-V4U94fg" name="isRunning"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_vBCSAJVZEeeu94-V4U94fg" name="Button"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_xwilMJVZEeeu94-V4U94fg" name="Radio"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_23f38JVZEeeu94-V4U94fg" name="Led"/>
+</uml:Model>
