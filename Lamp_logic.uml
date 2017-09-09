@@ -1,16 +1,151 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_fw-TMJVXEeeu94-V4U94fg" name="Lamp_logic" visibility="public">
-  <packagedElement xmi:type="uml:Class" xmi:id="_hRj8MJVXEeeu94-V4U94fg" name="IThread" isAbstract="true">
-    <ownedOperation xmi:type="uml:Operation" xmi:id="_lqpxcJVZEeeu94-V4U94fg" name="start" isAbstract="true"/>
-    <ownedOperation xmi:type="uml:Operation" xmi:id="_oTzacJVYEeeu94-V4U94fg" name="stop" isAbstract="true"/>
-    <ownedOperation xmi:type="uml:Operation" xmi:id="_qpm0MJVYEeeu94-V4U94fg" name="isRunning" isAbstract="true"/>
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_fw-TMJVXEeeu94-V4U94fg" name="Lamp_logic" visibility="public">
+  <packagedElement xmi:type="uml:Class" xmi:id="_hRj8MJVXEeeu94-V4U94fg" name="IThread" visibility="public" isAbstract="true">
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_ie3lYJVuEeeu94-V4U94fg" name="start"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_jVo1UJVuEeeu94-V4U94fg" name="stop"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_kTSJUJVuEeeu94-V4U94fg" name="isRunning">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_1joIYJVxEeeu94-V4U94fg" direction="return">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+      </ownedParameter>
+    </ownedOperation>
   </packagedElement>
-  <packagedElement xmi:type="uml:Class" xmi:id="_CYlK8JVZEeeu94-V4U94fg" name="Mrf24j">
-    <ownedOperation xmi:type="uml:Operation" xmi:id="_Oku-wJVZEeeu94-V4U94fg" name="start"/>
-    <ownedOperation xmi:type="uml:Operation" xmi:id="_Pfc6kJVZEeeu94-V4U94fg" name="stop"/>
-    <ownedOperation xmi:type="uml:Operation" xmi:id="_PlZKgJVZEeeu94-V4U94fg" name="isRunning"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_vBCSAJVZEeeu94-V4U94fg" name="ThreadButton">
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_xJ52cJVuEeeu94-V4U94fg" name="start"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_yPMDgJVuEeeu94-V4U94fg" name="stop"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_zI22cJVuEeeu94-V4U94fg" name="isRunning">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_tkIiQJVxEeeu94-V4U94fg" direction="return">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+      </ownedParameter>
+    </ownedOperation>
   </packagedElement>
-  <packagedElement xmi:type="uml:Class" xmi:id="_vBCSAJVZEeeu94-V4U94fg" name="Button"/>
-  <packagedElement xmi:type="uml:Class" xmi:id="_xwilMJVZEeeu94-V4U94fg" name="Radio"/>
-  <packagedElement xmi:type="uml:Class" xmi:id="_23f38JVZEeeu94-V4U94fg" name="Led"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_xwilMJVZEeeu94-V4U94fg" name="ThreadRadio">
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_2xnF0JVuEeeu94-V4U94fg" name="start"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_3ywZwJVuEeeu94-V4U94fg" name="stop"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_4q47oJVuEeeu94-V4U94fg" name="isRunning">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_yKUDMJVxEeeu94-V4U94fg" direction="return">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+      </ownedParameter>
+    </ownedOperation>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_23f38JVZEeeu94-V4U94fg" name="ThreadLed">
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_0GcgEJVuEeeu94-V4U94fg" name="start"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_01FuwJVuEeeu94-V4U94fg" name="stop"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_1rekMJVuEeeu94-V4U94fg" name="isRunning">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_vq5acJVxEeeu94-V4U94fg" direction="return">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+      </ownedParameter>
+    </ownedOperation>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_Zx2iAJVaEeeu94-V4U94fg" name="Message">
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_cdzlYJVvEeeu94-V4U94fg" name="putMessage">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_vGOckJVwEeeu94-V4U94fg" name="message" type="_lmqK0JVwEeeu94-V4U94fg"/>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_csb3QJVvEeeu94-V4U94fg" name="getMessage" visibility="public" isQuery="true">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_3VlDoJVwEeeu94-V4U94fg" name="message" type="_lmqK0JVwEeeu94-V4U94fg" direction="return"/>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_cxXakJVvEeeu94-V4U94fg" name="full">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_gU0oUJVxEeeu94-V4U94fg" direction="return">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_c3a_QJVvEeeu94-V4U94fg" name="empty" concurrency="concurrent">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_mrIDEJVxEeeu94-V4U94fg" direction="return">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_dAZ8IJVvEeeu94-V4U94fg" name="size">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_qUJYMJVxEeeu94-V4U94fg" direction="return">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedParameter>
+    </ownedOperation>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_fEbO4JVaEeeu94-V4U94fg" name="Mrf24j"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_h1K4MJVaEeeu94-V4U94fg" name="IHAL" isAbstract="true"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_thJ-MJVaEeeu94-V4U94fg" name="HALSpi"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_40rg4JVaEeeu94-V4U94fg" name="HALButton"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_9ttsYJVaEeeu94-V4U94fg" name="HALLed"/>
+  <packagedElement xmi:type="uml:Association" xmi:id="_rVXTsJVoEeeu94-V4U94fg" visibility="public" memberEnd="_rVX6wpVoEeeu94-V4U94fg _rVaXAJVoEeeu94-V4U94fg">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_rVX6wJVoEeeu94-V4U94fg" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_rVX6wZVoEeeu94-V4U94fg" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_rVX6wpVoEeeu94-V4U94fg" name="Thread" type="_Zx2iAJVaEeeu94-V4U94fg" aggregation="shared" association="_rVXTsJVoEeeu94-V4U94fg">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_tQBCgJVoEeeu94-V4U94fg" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_tQKMcJVoEeeu94-V4U94fg" value="*"/>
+    </ownedEnd>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_rVaXAJVoEeeu94-V4U94fg" name="Radio" type="_vBCSAJVZEeeu94-V4U94fg" association="_rVXTsJVoEeeu94-V4U94fg">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_sV48kJVoEeeu94-V4U94fg" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_sV_qQJVoEeeu94-V4U94fg" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_TOmSkJVpEeeu94-V4U94fg" visibility="public" memberEnd="_TOngsJVpEeeu94-V4U94fg _TOoHwJVpEeeu94-V4U94fg">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_TOm5oJVpEeeu94-V4U94fg" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_TOm5oZVpEeeu94-V4U94fg" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_TOoHwJVpEeeu94-V4U94fg" name="Radio" type="_23f38JVZEeeu94-V4U94fg" association="_TOmSkJVpEeeu94-V4U94fg">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_W7CIEJVpEeeu94-V4U94fg" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_W7I1wJVpEeeu94-V4U94fg" value="1"/>
+    </ownedEnd>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_TOngsJVpEeeu94-V4U94fg" name="Thread" type="_Zx2iAJVaEeeu94-V4U94fg" aggregation="shared" association="_TOmSkJVpEeeu94-V4U94fg">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_WYVqsJVpEeeu94-V4U94fg" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_WYajMJVpEeeu94-V4U94fg" value="*"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_jr8OwJVpEeeu94-V4U94fg" memberEnd="_jr9c4ZVpEeeu94-V4U94fg _jr_5IJVpEeeu94-V4U94fg">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_jr810JVpEeeu94-V4U94fg" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_jr9c4JVpEeeu94-V4U94fg" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_jr_5IJVpEeeu94-V4U94fg" name="Radio" type="_xwilMJVZEeeu94-V4U94fg" association="_jr8OwJVpEeeu94-V4U94fg">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_naXBQJVpEeeu94-V4U94fg" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_nae9EJVpEeeu94-V4U94fg" value="1"/>
+    </ownedEnd>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_jr9c4ZVpEeeu94-V4U94fg" name="Message" type="_Zx2iAJVaEeeu94-V4U94fg" aggregation="shared" association="_jr8OwJVpEeeu94-V4U94fg">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_oF__QJVpEeeu94-V4U94fg" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_oGIiIJVpEeeu94-V4U94fg" value="*"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Realization" xmi:id="_mKffYJVqEeeu94-V4U94fg" client="_vBCSAJVZEeeu94-V4U94fg" supplier="_hRj8MJVXEeeu94-V4U94fg"/>
+  <packagedElement xmi:type="uml:Realization" xmi:id="_pPe6YJVqEeeu94-V4U94fg" client="_23f38JVZEeeu94-V4U94fg" supplier="_hRj8MJVXEeeu94-V4U94fg"/>
+  <packagedElement xmi:type="uml:Realization" xmi:id="_qOSsAJVqEeeu94-V4U94fg" client="_xwilMJVZEeeu94-V4U94fg" supplier="_hRj8MJVXEeeu94-V4U94fg"/>
+  <packagedElement xmi:type="uml:Realization" xmi:id="_rY4P0JVqEeeu94-V4U94fg" client="_Zx2iAJVaEeeu94-V4U94fg" supplier="_hRj8MJVXEeeu94-V4U94fg"/>
+  <packagedElement xmi:type="uml:Realization" xmi:id="_ti9hwJVqEeeu94-V4U94fg" client="_40rg4JVaEeeu94-V4U94fg" supplier="_h1K4MJVaEeeu94-V4U94fg"/>
+  <packagedElement xmi:type="uml:Realization" xmi:id="_ydDdMJVqEeeu94-V4U94fg" client="_9ttsYJVaEeeu94-V4U94fg" supplier="_h1K4MJVaEeeu94-V4U94fg"/>
+  <packagedElement xmi:type="uml:Realization" xmi:id="_5KhawJVqEeeu94-V4U94fg" client="_thJ-MJVaEeeu94-V4U94fg" supplier="_h1K4MJVaEeeu94-V4U94fg"/>
+  <packagedElement xmi:type="uml:Association" xmi:id="_r86UgJVrEeeu94-V4U94fg" memberEnd="_r87iopVrEeeu94-V4U94fg _r88JsJVrEeeu94-V4U94fg">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_r87ioJVrEeeu94-V4U94fg" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_r87ioZVrEeeu94-V4U94fg" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_r88JsJVrEeeu94-V4U94fg" name="Mrf24j" type="_fEbO4JVaEeeu94-V4U94fg" aggregation="shared" association="_r86UgJVrEeeu94-V4U94fg"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_r87iopVrEeeu94-V4U94fg" name="Thread" type="_xwilMJVZEeeu94-V4U94fg" association="_r86UgJVrEeeu94-V4U94fg"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_9NTeQJVrEeeu94-V4U94fg" memberEnd="_9NUsYJVrEeeu94-V4U94fg _9NVTcJVrEeeu94-V4U94fg">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_9NUFUJVrEeeu94-V4U94fg" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_9NUFUZVrEeeu94-V4U94fg" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_9NVTcJVrEeeu94-V4U94fg" name="MRF24j" type="_fEbO4JVaEeeu94-V4U94fg" association="_9NTeQJVrEeeu94-V4U94fg"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_9NUsYJVrEeeu94-V4U94fg" name="HAL" type="_thJ-MJVaEeeu94-V4U94fg" aggregation="shared" association="_9NTeQJVrEeeu94-V4U94fg">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Eq7GYJVsEeeu94-V4U94fg" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_ErFecJVsEeeu94-V4U94fg" value="*"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_AJ0SsJVsEeeu94-V4U94fg" memberEnd="_AJ2H4pVsEeeu94-V4U94fg _AJ2u8JVsEeeu94-V4U94fg">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_AJ2H4JVsEeeu94-V4U94fg" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_AJ2H4ZVsEeeu94-V4U94fg" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_AJ2H4pVsEeeu94-V4U94fg" name="HAL" type="_9ttsYJVaEeeu94-V4U94fg" aggregation="shared" association="_AJ0SsJVsEeeu94-V4U94fg">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_LSgeYJVsEeeu94-V4U94fg" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_LSpoUJVsEeeu94-V4U94fg" value="*"/>
+    </ownedEnd>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_AJ2u8JVsEeeu94-V4U94fg" name="Thread" type="_23f38JVZEeeu94-V4U94fg" association="_AJ0SsJVsEeeu94-V4U94fg"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_NnFJEJVsEeeu94-V4U94fg" memberEnd="_NnGXMJVsEeeu94-V4U94fg _NnG-QJVsEeeu94-V4U94fg">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_NnFwIJVsEeeu94-V4U94fg" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_NnFwIZVsEeeu94-V4U94fg" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_NnGXMJVsEeeu94-V4U94fg" name="HAL" type="_40rg4JVaEeeu94-V4U94fg" aggregation="shared" association="_NnFJEJVsEeeu94-V4U94fg">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_PDJecJVsEeeu94-V4U94fg" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_PDQMIJVsEeeu94-V4U94fg" value="*"/>
+    </ownedEnd>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_NnG-QJVsEeeu94-V4U94fg" name="Thread" type="_vBCSAJVZEeeu94-V4U94fg" association="_NnFJEJVsEeeu94-V4U94fg"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_lmqK0JVwEeeu94-V4U94fg" name="T"/>
 </uml:Model>
