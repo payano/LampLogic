@@ -1,0 +1,42 @@
+::THREAD MESSAGE LAYOUT::
+
+This is the suggested layout for the messages that will be communicated between threads:
+The STM32 microcontroller is 32 bit, and because of that one integer is a frame.
+
+The numbers defines the size of the type and is given in bits.
+
+::FRAME::
+-------------------------------------------------------
+|              H E A D E R                  | PAYLOAD |
+-------------------------------------------------------
+| FROM | TO | MSG_RESPONSE | MESSAGE_LENGTH | MESSAGE |
+|  4   | 4  |      1       |        3       |    20   |
+-------------------------------------------------------
+FROM: 0 - 7 (thread number)                     ||  
+TO: 0 - 7 (thread number)                       ||
+MSG_RESPONSE:                                   || 
+  0 = No response                               ||
+  1 = Response                                  ||
+MESSAGE_LENGTH: 0 - 5 Messages                  ||
+                                                ||
+                                                \/
+                                            -----------------------------------------
+                                            |             M E S S A G E             |
+                                            -----------------------------------------
+                                            | MSG 0 | MSG 1 | MSG 2 | MSG 3 | MSG 4 | 
+                                            -----------------------------------------
+                                               ||
+                                               \/
+                                            ----------------------------
+                                            |     M E S S A G E  0     |
+                                            ----------------------------
+                                            | ADDRESS_REGISTER | VALUE |
+                                            |        3         |   2   |
+                                            ----------------------------
+                                            
+                                            ADDRESS REGISTER: 0 - 7
+                                            VALUE:
+                                              0 = Set 0
+                                              1 = Set 1
+                                              2 = Flip value
+                                              3 = Unused
