@@ -4,18 +4,17 @@ The STM32 microcontroller is 32 bit, and because of that one integer is a messag
 
 The numbers defines the size of the type and is given in bits.
 ::MESSAGE::
----------------------------------------------------------------------------------------------
-| FROM | TO | MSG_RESPONSE | MSG_SEQUENCE_NUMBER | MESSAGE_LENGTH | REGISTER_ADDRESS | VALUE |
-|  5   | 5  |      2       |          4          |       4        |         4        |   8   | = 32
-----------------------------------------------------------------------------------------------
-FROM: 0 - 31 (thread number)  
-TO: 0 - 31 (thread number)
+-----------------------------------------------------------------------------------------
+| FROM | MSG_RESPONSE | MSG_SEQUENCE_NUMBER | MESSAGE_LENGTH | REGISTER_ADDRESS | VALUE |
+|  6   |      2       |          5          |       5        |         6        |   8   | = 32
+-----------------------------------------------------------------------------------------
+FROM: 0 - 63 (thread number)  
 MSG_RESPONSE: 
   0 = No response
   1 = ACK Request
   2 = ACK Response
   3 = Unused
-MESSAGE_SEQUENCE_NUMBER: 0-15 messages. The message number in sequence, if one is sent this is always zero. 
-MESSAGE_LENGTH: 0 - 15 Messages
-ADDRESS REGISTER: 0 - 15
+MESSAGE_SEQUENCE_NUMBER: 0 - 31 messages. The message number in sequence, if one is sent this is always zero. 
+MESSAGE_LENGTH: 0 - 31 Messages
+ADDRESS REGISTER: 0 - 63
 VALUE: 0 - 255
