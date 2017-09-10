@@ -14,9 +14,11 @@
 #include "Message.h"
 #include <string>
 #include <memory>
-std::shared_ptr<Message<int>> mrf24jInbox 	= std::make_shared<Message<int>>();
-std::shared_ptr<Message<int>> ledInbox		= std::make_shared<Message<int>>();
-std::shared_ptr<Message<int>> buttonInbox	= std::make_shared<Message<int>>();
+#include "Mailbox.h"
+
+std::shared_ptr<Mailbox> mrf24jInbox 	= std::make_shared<Mailbox>();
+std::shared_ptr<Mailbox> ledInbox		= std::make_shared<Mailbox>();
+std::shared_ptr<Mailbox> buttonInbox	= std::make_shared<Mailbox>();
 
 void mrf24jThread(){
 	Mrf24j mrf24j(mrf24jInbox, ledInbox);

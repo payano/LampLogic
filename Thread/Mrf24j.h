@@ -11,14 +11,15 @@
 #include "IThread.h"
 #include "Message.h"
 #include <memory>
+#include "Mailbox.h"
 
 class Mrf24j: public IThread {
 private:
-	std::shared_ptr<Message<int>> mInbox;
-	std::shared_ptr<Message<int>> mOutbox;
+	std::shared_ptr<Mailbox> mInbox;
+	std::shared_ptr<Mailbox> mOutbox;
 public:
 	Mrf24j();
-	Mrf24j(std::shared_ptr<Message<int>> inbox, std::shared_ptr<Message<int>> outbox);
+	Mrf24j(std::shared_ptr<Mailbox> inbox, std::shared_ptr<Mailbox> outbox);
 	virtual ~Mrf24j();
 
 	virtual void start();

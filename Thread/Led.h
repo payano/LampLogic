@@ -10,18 +10,19 @@
 #include "Message.h"
 #include <memory>
 #include "IThread.h"
+#include "Mailbox.h"
 
 class Led : public IThread {
 private:
-	std::shared_ptr<Message<int>> mInbox;
-	std::shared_ptr<Message<int>> mOutboxMrf24j;
-	std::shared_ptr<Message<int>> mOutboxButton;
+	std::shared_ptr<Mailbox> mInbox;
+	std::shared_ptr<Mailbox> mOutboxMrf24j;
+	std::shared_ptr<Mailbox> mOutboxButton;
 public:
 	Led();
 	Led (
-			std::shared_ptr<Message<int>> inbox,
-			std::shared_ptr<Message<int>> outboxMrf24j,
-			std::shared_ptr<Message<int>> outboxButton
+			std::shared_ptr<Mailbox> inbox,
+			std::shared_ptr<Mailbox> outboxMrf24j,
+			std::shared_ptr<Mailbox> outboxButton
 		);
 	virtual ~Led();
 

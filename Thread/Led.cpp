@@ -14,9 +14,9 @@ Led::Led() {
 	// TODO Auto-generated constructor stub
 
 }
-Led::Led(std::shared_ptr<Message<int>> inbox,
-		 std::shared_ptr<Message<int>> outboxMrf24j,
-		 std::shared_ptr<Message<int>> outboxButton):
+Led::Led(std::shared_ptr<Mailbox> inbox,
+		std::shared_ptr<Mailbox> outboxMrf24j,
+		std::shared_ptr<Mailbox> outboxButton):
 	mInbox(inbox),
 	mOutboxMrf24j(outboxMrf24j),
 	mOutboxButton(outboxButton){
@@ -27,13 +27,13 @@ Led::~Led() {
 }
 
 void Led::start(){
-	while(1){
-		std::cout << "size: " << mInbox->size() << std::endl;
-		if(!mInbox->empty() ){
-			std::cout << "got message:" << mInbox->getMessage() << std::endl;
-		}
-		std::this_thread::sleep_for(std::chrono::milliseconds(50));
-	}
+//	while(1){
+//		std::cout << "size: " << mInbox->size() << std::endl;
+//		if(!mInbox->empty() ){
+//			std::cout << "got message:" << mInbox->getMessage() << std::endl;
+//		}
+//		std::this_thread::sleep_for(std::chrono::milliseconds(50));
+//	}
 }
 
 void Led::stop(){
