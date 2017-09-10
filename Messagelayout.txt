@@ -1,41 +1,21 @@
 ::THREAD MESSAGE LAYOUT::
 This is the suggested layout for messages that will be communicated between threads.
-The STM32 microcontroller is 32 bit, and because of that one integer is a frame.
+The STM32 microcontroller is 32 bit, and because of that one integer is a message.
 
 The numbers defines the size of the type and is given in bits.
-::FRAME::
--------------------------------------------------------
-|              H E A D E R                  | PAYLOAD |
--------------------------------------------------------
-| FROM | TO | MSG_RESPONSE | MESSAGE_LENGTH | MESSAGE |
-|  4   | 4  |      1       |        3       |    20   | = 32
--------------------------------------------------------
-FROM: 0 - 7 (thread number)                     ||  
-TO: 0 - 7 (thread number)                       ||
-MSG_RESPONSE:                                   || 
-  0 = No response                               ||
-  1 = Response                                  ||
-MESSAGE_LENGTH: 0 - 5 Messages                  ||
-                                                ||
-                                                \/
-                                            ---------------------------------
-                                            |         M E S S A G E         |
-                                            ---------------------------------
-                                            | MSG 0 | MSG 1 | MSG 2 | MSG 3 | 
-                                            |   5   |   5   |   5   |   5   | = 20
-                                            ---------------------------------
-                                               ||
-                                               \/
-                                            ----------------------------
-                                            |     M E S S A G E  0     |
-                                            ----------------------------
-                                            | ADDRESS_REGISTER | VALUE |
-                                            |        3         |   2   | = 5
-                                            ----------------------------
-                                            
-                                            ADDRESS REGISTER: 0 - 7
-                                            VALUE:
-                                              0 = Set 0
-                                              1 = Set 1
-                                              2 = Flip value
-                                              3 = Unused
+::MESSAGE::
+---------------------------------------------------------------------------------------------
+| FROM | TO | MSG_RESPONSE | MSG_SEQUENCE_NUMBER | MESSAGE_LENGTH | REGISTER_ADDRESS | VALUE |
+|  5   | 5  |      2       |          4          |       4        |         4        |   8   | = 32
+----------------------------------------------------------------------------------------------
+FROM: 0 - 7 (thread number)  
+TO: 0 - 7 (thread number)
+MSG_RESPONSE: 
+  0 = No response
+  1 = ACK Request
+  2 = ACK Response
+  3 = Unused
+MESSAGE_SEQUENCE_NUMBER: 0-15 messages. The message number in sequence, if one is sent this is always zero. 
+MESSAGE_LENGTH: 0 - 15 Messages
+ADDRESS REGISTER: 0 - 15
+VALUE: 0 - 255
