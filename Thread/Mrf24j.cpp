@@ -14,9 +14,10 @@ Mrf24j::Mrf24j() {
 	// TODO Auto-generated constructor stub
 
 }
-Mrf24j::Mrf24j(std::shared_ptr<Message<int>> incoming, std::shared_ptr<Message<int>> outgoing):
-		mIncoming(incoming),
-		mOutgoing(outgoing){
+Mrf24j::Mrf24j(std::shared_ptr<Message<int>> inbox,
+		std::shared_ptr<Message<int>> outbox):
+		mInbox(inbox),
+		mOutbox(outbox){
 
 }
 
@@ -26,8 +27,8 @@ Mrf24j::~Mrf24j() {
 
 void Mrf24j::start(){
 	while(1){
-		if(!mOutgoing->full()){
-			mOutgoing->putMessage(3);
+		if(!mOutbox->full()){
+			mOutbox->putMessage(3);
 			std::cout << "message put..."  << std::endl;
 			//std::this_thread::sleep_for(std::chrono::milliseconds(1));
 		}

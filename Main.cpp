@@ -14,16 +14,17 @@
 #include "Message.h"
 #include <string>
 #include <memory>
-std::shared_ptr<Message<int>> message1 = std::make_shared<Message<int>>();
-std::shared_ptr<Message<int>> message2 = std::make_shared<Message<int>>();
+std::shared_ptr<Message<int>> mrf24jInbox 	= std::make_shared<Message<int>>();
+std::shared_ptr<Message<int>> ledInbox		= std::make_shared<Message<int>>();
+std::shared_ptr<Message<int>> buttonInbox	= std::make_shared<Message<int>>();
 
 void mrf24jThread(){
-	Mrf24j mrf24j(message1, message2);
+	Mrf24j mrf24j(mrf24jInbox, ledInbox);
 	mrf24j.start();
 
 }
 void ledThread(){
-	Led led(message2, message1);
+	Led led(ledInbox, mrf24jInbox, buttonInbox);
 	led.start();
 
 }
@@ -33,8 +34,6 @@ void buttonThread(){
 
 int main(void){
 	//Start program:
-
-	//create mutexes here
 
 	//Create mrf24j:
 	std::thread mrf24j_thread(mrf24jThread);

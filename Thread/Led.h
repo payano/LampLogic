@@ -13,11 +13,16 @@
 
 class Led : public IThread {
 private:
-	std::shared_ptr<Message<int>> mIncoming;
-	std::shared_ptr<Message<int>> mOutgoing;
+	std::shared_ptr<Message<int>> mInbox;
+	std::shared_ptr<Message<int>> mOutboxMrf24j;
+	std::shared_ptr<Message<int>> mOutboxButton;
 public:
 	Led();
-	Led(std::shared_ptr<Message<int>> incoming, std::shared_ptr<Message<int>> outgoing);
+	Led (
+			std::shared_ptr<Message<int>> inbox,
+			std::shared_ptr<Message<int>> outboxMrf24j,
+			std::shared_ptr<Message<int>> outboxButton
+		);
 	virtual ~Led();
 
 	virtual void start();
