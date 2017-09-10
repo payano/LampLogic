@@ -23,4 +23,9 @@ PAPER SHEETS(MESSAGES)         ENVELOPE                  MAILBOX
 ------------                --------------              |    |  |---          
                                                         |    |---             
                                                         ------
-A mailbox can have multiple envelopes.
+A mailbox has a list of envelopes.
+The envelope has a list of paper sheets(messages).
+The envelope has also metadata:
+From recipient, to recipient, messages,. something else?
+ 
+A paper sheet has an 'address register' and a 'value'.
