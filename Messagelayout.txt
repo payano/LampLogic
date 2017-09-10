@@ -8,8 +8,8 @@ The numbers defines the size of the type and is given in bits.
 | FROM | TO | MSG_RESPONSE | MSG_SEQUENCE_NUMBER | MESSAGE_LENGTH | REGISTER_ADDRESS | VALUE |
 |  5   | 5  |      2       |          4          |       4        |         4        |   8   | = 32
 ----------------------------------------------------------------------------------------------
-FROM: 0 - 7 (thread number)  
-TO: 0 - 7 (thread number)
+FROM: 0 - 31 (thread number)  
+TO: 0 - 31 (thread number)
 MSG_RESPONSE: 
   0 = No response
   1 = ACK Request
