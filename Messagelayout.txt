@@ -1,10 +1,8 @@
 ::THREAD MESSAGE LAYOUT::
-
-This is the suggested layout for the messages that will be communicated between threads:
+This is the suggested layout for messages that will be communicated between threads.
 The STM32 microcontroller is 32 bit, and because of that one integer is a frame.
 
 The numbers defines the size of the type and is given in bits.
-
 ::FRAME::
 -------------------------------------------------------
 |              H E A D E R                  | PAYLOAD |
